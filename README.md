@@ -1,5 +1,7 @@
 # idris-cil-ubuntu-xenial-build [![Build Status](https://img.shields.io/travis/irreverent-pixel-feats/idris-cil-ubuntu-xenial-build.svg?style=flat)](https://travis-ci.org/irreverent-pixel-feats/idris-cil-ubuntu-xenial-build)
 
+Latest version of Unity Ubuntu builds can be found on this [forum](https://forum.unity3d.com/threads/unity-on-linux-release-notes-and-known-issues.350256/) (Yeah, instead of a download page its a forum thread, its a bit weird...)
+
 SHAs for tracking the build environment used to build your binaries can be found in
 `/var/version`.
 
