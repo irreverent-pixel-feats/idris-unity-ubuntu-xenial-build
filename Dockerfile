@@ -60,3 +60,13 @@ RUN mkdir -p /etc/unity \
   && dpkg -i unity-editor_amd64-${UNITY_VERSION}.deb \
   && cd / \
   && rm -rfv /etc/unity
+
+# stuff in the data dir is likely to change very frequently but doesnt actually affect the image much itself,
+# example: version SHAs
+# So adding it last should speed up the builds
+ADD data /tmp
+
+# Add the git-sha for the docker file to the image so if you need you can see where
+# your image sat in the timeline of git changes (which might be tricky to correlate with the
+# docker hub changes)
+RUN mkdir -p /var/versions && cp -v /tmp/version /var/versions/idris-unity-build-ubuntu_xenial.version
