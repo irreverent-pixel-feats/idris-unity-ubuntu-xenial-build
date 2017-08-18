@@ -1,11 +1,15 @@
 dist: trusty
 sudo: false
-language: generic
+# this image requires a lot of space to build, it seems generally the
+# VMs have ~3GB of space only :/ it seems to vary from build to build
+# though, try the minimal image to eek out as much space as i can
+language: minimal
 services:
   - docker
 
 script:
-  - travis_wait 60 bin/ci
+  - bin/ci
+
 notifications:
   slack:
-    secure: gBSJZTZoWP9dL+m2NVXsooqE/6qwZ3XvtPafSlcY1xwgzA3lEtfDIEB76dZd+2wLFO56v25us1L4EfUx1FCqHzXWD0W4Ve8ozBYBPdIJQy0531JL5YVPdFfd6ChKOIs0AyDmDB+AGM/4vbBvF9tCqNozdQfeO7D/mvPop1HgdF9TusFdmkqXG5pC0iDQHCeAkOc4VlHOSORvOLKTMGOBTdO0CS89a97vKIf+v50St+lIqQeANiSCdemcu4A8VXCmggGrMHim5NqyUCBMf8y691Y3E8Xsi6w4stzen3zecdRK4FU27/TMP++rK+NQlZ0VjbekoKliD9GMoyp8qNqZc9ukkWbwjo2tb/3G3Zp4Qr/zcX+qEQr2SEgFhjPAan8AdhmQo2mb9PjHg+9BC1NZJtwWRsUfhIccFGwKCepsDEZsOdclqhm4kdC8inPD1QUTd7y3u+bSSLh1t2zD5KahJQLuB3vh5RVbtLRNryYIe4wO/voxxV7i1+JkQ4GmySOpOwGTGNr+7vqDcAUgJFuwjpTrlw8xFceNX0vUOrt86hhOHLZvCone0aipfjjIaXj5T4HAFKGIglAhkQM5QVIbdIwmK997bz1UgJ+q64Lz31uxEpKO878E5SJV7Z2OdTr2U/VAet7RcMxbZZh5nTYZwEhSO18Q7Xi8bjjGIduU1P8=
+    secure: UaTY60y0S+3JDU7G9nkFMnkib+pDrn6JqwmIgNoDYAd8/GuwwvUiuGAJKnBjoR4839VHBtdsRjRA1u0r6vt+lXHJ9zVM+gGcYSGkqoxKv1ciDiWvRF4x//I1mp/l/e7O49+rwNGa/qAF4HE+mkY12Ga7jlds7XRmnqVYjflCFL9JMH9oXicWlFsgGzt55lmi7oMZwxviiF7SzNBakfBk4rAC/ZLEbu4sj4EnZ6hXj3wjxFT/YAgOUQD99oWk2bOQ6jUByiadJjYremzLD8PQ2RtBw3ZD41YHFTwDc7rST85XxltGy9u6/ugaifkb9H2lBKBKrodUWhOKymh3cmG27lhRLtYxy/jvaLO1GlMsoCPfyyhObkJvbF6lyymAqCh0XCOOFSbgRaNnX+XGavVVWYDB+HUxEQOL63zpyYZXHQ4cwAfwoD8Ba1XlhkVq6BxTvL2yKXUhVIK3jUwM4oqIhW8TMCLE0W7mdHz89U+W1Vp4kaJDQzUxH70AlvVWTyLqQit5KgKWrrBb3cyZQvA0GDKSmefaD2PNU3Qy/Oma/gUU4c32b8y1Rkp78y3BlT8Uo1RSlS1D/poulqR7Tr9LF9hVCfN7sGdNZw/paCVwAPyvewp2hsVrTcphefglqSAOBQjBCPxzO7/cnhn/dPQQpNfdt6nOJpM5jvomcRMuMpg=
