@@ -1,4 +1,4 @@
-FROM irreverentpixelfeats/idris-cil-build:ubuntu_xenial_1.0-20170818031901-8811fdd
+FROM irreverentpixelfeats/idris-cil-build:ubuntu_xenial_1.0-20170901065315-0a15528
 MAINTAINER Dom De Re <domdere@irreverentpixelfeats.com>
 
 ENV UNITY_VERSION=5.6.1xf1Linux

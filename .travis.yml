@@ -1,5 +1,5 @@
 dist: trusty
-sudo: false
+sudo: required
 # this image requires a lot of space to build, it seems generally the
 # VMs have ~3GB of space only :/ it seems to vary from build to build
 # though, try the minimal image to eek out as much space as i can
