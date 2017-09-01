@@ -12,7 +12,7 @@ git-sha:
 deps: git-sha
 
 build: deps Dockerfile
-	docker pull "${REPO}:${BASE_TAG}" || true
+	#docker pull "${REPO}:${BASE_TAG}" || true
 	docker build --cache-from "${REPO}:${BASE_TAG}" --tag "${REPO}:${BASE_TAG}" --tag "${REPO}:${BASE_TAG}-$(shell cat data/version)" .
 
 images/idris-unity-build-${BASE_TAG}.tar.gz: build
